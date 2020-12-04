@@ -12,7 +12,7 @@ var = ((Math.sqrt(d))/2/a).to_f
 
 
 x_1 = ed_koren + var
-x_2 = ed_koren + var
+x_2 = ed_koren - var
  
 if (d < 0)
   puts "Действительных корней нет"
