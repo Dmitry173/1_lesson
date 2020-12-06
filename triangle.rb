@@ -7,18 +7,14 @@ b = gets.chomp.to_f
 puts "Введите третью сторону треугольника"
 c = gets.chomp.to_f
 
-katet_a = a * a
-katet_b = b * b
-gipotenuza = c * c
-sum_katetov = katet_a + katet_b
 
-puts "Катет а: #{katet_a}"
-puts "Катет б: #{katet_b}"
-puts "Гипотенуза равна: #{gipotenuza}"
+sides = [a, b, c]
+  gipotenuza = sides.max
+  sides.delete(gipotenuza)
+  katet = sides
 
-
-if gipotenuza == sum_katetov
-  puts "Треугольник прямоугольный(Теорема Пифагора)"
-elsif gipotenuza == katet_a && gipotenuza == katet_b
-  puts "Треугольник равносторонний и равнобедренный(все три стороны равны)"
+if c == a && c == b
+  puts "Треугольник равносторонний и равнобедренный"
+elsif gipotenuza**2 == (katet.first**2 + katet.last**2)
+  puts 'Треугольник прямоугольный'
 end
